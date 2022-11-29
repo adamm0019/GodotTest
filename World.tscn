@@ -1,0 +1,120 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://trees.png" type="Texture" id=1]
+[ext_resource path="res://tiles.tres" type="TileSet" id=2]
+[ext_resource path="res://grass.png" type="Texture" id=3]
+[ext_resource path="res://viking2.png" type="Texture" id=4]
+[ext_resource path="res://Player.gd" type="Script" id=5]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 8.0
+height = 3.0
+
+[node name="World" type="Node2D"]
+position = Vector2( -16, 18 )
+
+[node name="Player" type="KinematicBody2D" parent="."]
+position = Vector2( -14, -48 )
+script = ExtResource( 5 )
+
+[node name="Sprite" type="Sprite" parent="Player"]
+texture = ExtResource( 4 )
+hframes = 9
+vframes = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2( 2, 5 )
+shape = SubResource( 1 )
+
+[node name="Camera2D" type="Camera2D" parent="Player"]
+current = true
+zoom = Vector2( 0.5, 0.4 )
+smoothing_enabled = true
+
+[node name="TileMap" type="TileMap" parent="."]
+position = Vector2( -114, -91 )
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 32, 32 )
+format = 1
+tile_data = PoolIntArray( -131076, 0, 0, -196605, 0, 0, -196598, 0, 0, -196591, 0, 0, -196585, 0, 0, -196578, 0, 0, -196576, 0, 0, -196569, 0, 0, -131069, 0, 0, -4, 2, 0, -65533, 2, 0, -65526, 2, 0, -65521, 2, 0, -65520, 2, 0, -65516, 2, 0, -65511, 2, 0, -65504, 2, 0, -65497, 2, 0, 65532, 4, 0, 3, 4, 0, 10, 4, 0, 17, 4, 0, 23, 4, 0, 28, 4, 0, 32, 4, 0, 39, 4, 0, 131068, 4, 0, 65539, 4, 0, 65546, 4, 0, 65552, 4, 0, 65553, 4, 0, 65560, 4, 0, 65567, 4, 0, 65568, 4, 0, 65575, 4, 0 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="TileMap"]
+
+[node name="grassStart4" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 457, 83 )
+scale = Vector2( 0.519852, 0.600767 )
+texture = ExtResource( 3 )
+
+[node name="grassStart3" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 146, 85 )
+scale = Vector2( 0.584147, 0.444773 )
+texture = ExtResource( 3 )
+
+[node name="treesStart" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 256, 111 )
+scale = Vector2( 1.57984, 1.08447 )
+texture = ExtResource( 1 )
+offset = Vector2( -89.8827, -55.3265 )
+
+[node name="treesMid" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 665, 115 )
+scale = Vector2( 1.57984, 1.08447 )
+texture = ExtResource( 1 )
+offset = Vector2( -89.8827, -55.3265 )
+
+[node name="grassStart" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 305.222, 83.1731 )
+scale = Vector2( 0.754998, 0.605413 )
+texture = ExtResource( 3 )
+
+[node name="grassStart2" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 607, 83 )
+scale = Vector2( 0.762436, 0.580484 )
+texture = ExtResource( 3 )
+
+[node name="grassStart5" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 6, 85 )
+scale = Vector2( 0.584147, 0.444773 )
+texture = ExtResource( 3 )
+
+[node name="grassStart6" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 1397, 83 )
+scale = Vector2( 0.762436, 0.580484 )
+texture = ExtResource( 3 )
+
+[node name="grassStart7" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 1218.81, 82.7876 )
+scale = Vector2( 0.519852, 0.600767 )
+texture = ExtResource( 3 )
+
+[node name="grassStart8" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 907.806, 84.7876 )
+scale = Vector2( 0.584147, 0.444773 )
+texture = ExtResource( 3 )
+
+[node name="treesStart2" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 1017.81, 110.788 )
+scale = Vector2( 1.57984, 1.08447 )
+texture = ExtResource( 1 )
+offset = Vector2( -89.8827, -55.3265 )
+
+[node name="treesMid2" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 1426.81, 114.788 )
+scale = Vector2( 1.58313, 1.12674 )
+texture = ExtResource( 1 )
+offset = Vector2( -89.8827, -55.3265 )
+
+[node name="grassStart9" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 1067.03, 82.9607 )
+scale = Vector2( 0.754998, 0.605413 )
+texture = ExtResource( 3 )
+
+[node name="grassStart10" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 1368.81, 82.7876 )
+scale = Vector2( 0.762436, 0.580484 )
+texture = ExtResource( 3 )
+
+[node name="grassStart11" type="Sprite" parent="TileMap/StaticBody2D"]
+position = Vector2( 767.806, 84.7876 )
+scale = Vector2( 0.584147, 0.444773 )
+texture = ExtResource( 3 )
